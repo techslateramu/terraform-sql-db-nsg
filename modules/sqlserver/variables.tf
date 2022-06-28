@@ -1,7 +1,7 @@
 variable "sqlserver_name" {
     description = "Name of the mariadb server"
     type =  string
-    default = "sql-server-test-001"
+    default = "sql-server-test-123"
 }
 variable "rg_loc" {
     description = "location where the resources will be created"

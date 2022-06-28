@@ -4,8 +4,8 @@ resource "azurerm_resource_group" "test" {
   location = "East US"
 }
 
-module "sqlserver_single" {
-  source = "./modules/sqlserver"
+module "mysql_singleserver" {
+  source = "./modules/mysqlserver"
   rg_name = azurerm_resource_group.test.name
-  rg_loc = azurerm_resource_group.location.name
+  rg_loc = azurerm_resource_group.test.location
 }
