@@ -1,7 +1,8 @@
-variable "sqlserver_name" {
+
+variable "sqlflexserver_name" {
     description = "Name of the mariadb server"
     type        =  string
-    default     = "sql-server-test-1234"
+    default     = "sql-flexserver-test-12"
 }
 variable "rg_loc" {
     description = "location where the resources will be created"
@@ -24,7 +25,7 @@ variable "admin_name" {
 variable "password" {
     description = "Login password"
     type        = string
-    default     = "thisIsDog11"
+    default     = "thisIsDog113"
 }
 
 variable "sql_version" {
@@ -53,6 +54,6 @@ variable "force_ssl_minimal_version" {
 
 variable "sku_name" {
     description = "Specifies the SKU Name for this MySQL Server"
-    type        = "string"
-    default     = "B_Gen5_2"
+    type        = string
+    default     = "GP_Standard_D2ds_v4"
 }
