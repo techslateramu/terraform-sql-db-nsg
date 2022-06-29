@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "test" {
 }
 
 module "mysqlserver" {
-  source = "./modules/mysqlflexserver"
+  source = "./modules/mysqlserver"
   rg_name = azurerm_resource_group.test.name
   rg_loc = azurerm_resource_group.test.location
 }
