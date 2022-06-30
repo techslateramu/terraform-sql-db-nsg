@@ -10,8 +10,8 @@ module "mysqlserver" {
   rg_loc = azurerm_resource_group.test.location
 }
 
-# module "sqlserver_flex" {
-#   source = "./modules/mysqlflexserver"
-#   rg_name = azurerm_resource_group.test.name
-#   rg_loc = azurerm_resource_group.test.location
-# }
+module "sqlserver_flex" {
+  source = "./modules/mysqlflexserver"
+  rg_name = azurerm_resource_group.test.name
+  rg_loc = azurerm_resource_group.test.location
+}
