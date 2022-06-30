@@ -28,29 +28,29 @@ variable "password" {
     default     = "thisIsDog113"
 }
 
-variable "sql_version" {
-    description = "Specifies the version of MySQL to use"
-    type        = number
-    default     = "5.7"
-}
+# # variable "sql_version" {
+# #     description = "Specifies the version of MySQL to use"
+# #     type        = number
+# #     default     = "5.7"
+# }
 
-variable "public_network_access" {
-    description = "Whether or not public network access is allowed for this server"
-    type        = bool
-    default     = "true"
-}
+# # variable "public_network_access_enabled" {
+# #     description = "Whether or not public network access is allowed for this server"
+# #     type        = bool
+# #     default     = false
+# }
 
-variable "ssl_enforcement" {
-    description = "Specifies if SSL should be enforced on connections"
-    type        = bool
-    default     = "true"
-}
+# # variable "ssl_enforcement" {
+# #     description = "Specifies if SSL should be enforced on connections"
+# #     type        = bool
+# #     default     = true
+# }
 
-variable "force_ssl_minimal_version" {
-  description = "The minimal SSL version enforced"
-  type        = string
-  default     = "TLS1_2"
-}
+# variable "force_ssl_minimal_version" {
+#   description = "The minimal SSL version enforced"
+#   type        = string
+#   default     = "TLS1_2"
+# }
 
 variable "sku_name" {
     description = "Specifies the SKU Name for this MySQL Server"

@@ -33,15 +33,16 @@ resource "azurerm_private_dns_zone_virtual_network_link" "example" {
 }
 
 resource "azurerm_mysql_flexible_server" "example" {
-  name                   = var.sqlflexserver_name
-  resource_group_name    = var.rg_name
-  location               = var.rg_loc
-  administrator_login    = var.admin_name
-  administrator_password = var.password
-  backup_retention_days  = 7
-  delegated_subnet_id    = azurerm_subnet.example.id
-  private_dns_zone_id    = azurerm_private_dns_zone.example.id
-  sku_name               = var.sku_name
+  name                          = var.sqlflexserver_name
+  resource_group_name           = var.rg_name
+  location                      = var.rg_loc
+  administrator_login           = var.admin_name
+  administrator_password        = var.password
+  backup_retention_days         = 7
+  delegated_subnet_id           = azurerm_subnet.example.id
+  private_dns_zone_id           = azurerm_private_dns_zone.example.id
+  sku_name                      = var.sku_name
+  # public_network_access_enabled = var.public_network_access_enabled
 
   depends_on = [azurerm_private_dns_zone_virtual_network_link.example]
 }
