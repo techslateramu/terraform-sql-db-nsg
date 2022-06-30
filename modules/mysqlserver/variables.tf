@@ -36,13 +36,13 @@ variable "sql_version" {
 variable "public_network_access_enabled" {
     description = "Whether or not public network access is allowed for this server"
     type        = bool
-    default     = true
+    default     = false
 }
 
 variable "ssl_enforcement_enabled" {
     description = "Specifies if SSL should be enforced on connections"
     type        = bool
-    default     = true
+    default     = false
 }
 
 variable "ssl_minimal_tls_version_enforced" {
