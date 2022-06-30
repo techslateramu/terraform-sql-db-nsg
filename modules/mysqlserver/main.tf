@@ -5,10 +5,10 @@ resource "azurerm_mysql_server" "example" {
   version                           = var.sql_version
   administrator_login               = var.admin_name
   administrator_login_password      = var.password
-  public_network_access_enabled     = var.public_network_access
-  ssl_enforcement_enabled           = var.ssl_enforcement
+  public_network_access_enabled     = var.public_network_access_enabled
+  ssl_enforcement_enabled           = var.ssl_enforcement_enabled
   sku_name                          = var.sku_name
-  ssl_minimal_tls_version_enforced  = var.force_ssl_minimal_version
+  ssl_minimal_tls_version_enforced  = var.ssl_minimal_tls_version_enforced
   tags = {
     environment = "testing"
   }
